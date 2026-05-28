@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nf-dukeries-thinkbelt</title>
+  <meta name="description" content="nf-dukeries-thinkbelt: an ongoing investigation into distributed educational infrastructure, post-industrial territory, and anticipatory design." />
+  <style>
+    :root {
+      --bg: #f6f1e8;
+      --panel: #fffaf2;
+      --ink: #1f1a17;
+      --muted: #6a6058;
+      --line: #d7cdbf;
+      --accent: #5d3a2e;
+      --accent-2: #8a6a53;
+      --shadow: 0 8px 28px rgba(31, 26, 23, 0.08);
+      --radius: 22px;
+      --max: 1080px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.55), rgba(255,255,255,0.55)),
+        radial-gradient(circle at top left, rgba(93,58,46,0.08), transparent 36%),
+        radial-gradient(circle at top right, rgba(138,106,83,0.08), transparent 28%),
+        var(--bg);
+      line-height: 1.55;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 20px 48px;
+    }
+
+    header {
+      border: 1px solid var(--line);
+      background: rgba(255, 250, 242, 0.88);
+      border-radius: calc(var(--radius) + 8px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .masthead {
+      padding: 28px 24px 20px;
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      gap: 14px;
+    }
+
+    .eyebrow {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 6vw, 4.8rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      max-width: 62ch;
+      font-size: clamp(1.02rem, 2vw, 1.2rem);
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .intro {
+      padding: 18px 24px 24px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .note {
+      padding: 14px 16px;
+      border-left: 4px solid var(--accent-2);
+      background: rgba(255, 245, 232, 0.7);
+      border-radius: 0 14px 14px 0;
+      color: #4e443d;
+      max-width: 78ch;
+    }
+
+    .grid {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 20px;
+    }
+
+    section.card, nav.card {
+      background: rgba(255, 250, 242, 0.9);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.2rem;
+      letter-spacing: -0.02em;
+    }
+
+    .prose p { margin: 0 0 12px; max-width: 72ch; }
+
+    .links {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .links a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255,255,255,0.55);
+    }
+
+    .links a span { color: var(--muted); font-family: system-ui, sans-serif; font-size: 0.92rem; }
+
+    .pillrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 8px 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.55);
+      font-family: system-ui, sans-serif;
+      font-size: 0.9rem;
+      color: #4b423b;
+    }
+
+    .three {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .mini p { margin: 0; color: var(--muted); }
+    .mini strong { display: block; margin-bottom: 6px; color: var(--ink); }
+
+    footer {
+      margin-top: 22px;
+      padding: 18px 4px 0;
+      color: var(--muted);
+      font-family: system-ui, sans-serif;
+      font-size: 0.92rem;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--line), transparent);
+      margin: 18px 0;
+    }
+
+    .smallcaps {
+      font-variant: small-caps;
+      letter-spacing: 0.04em;
+    }
+
+    @media (max-width: 880px) {
+      .grid, .three { grid-template-columns: 1fr; }
+      .wrap { padding-inline: 14px; }
+      header, section.card, nav.card { border-radius: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="masthead">
+        <div class="eyebrow">nf-dukeries-thinkbelt</div>
+        <h1>Dukeries Thinkbelt</h1>
+        <p class="subtitle">An ongoing investigation into distributed educational infrastructure, post-industrial territory, and anticipatory design.</p>
+      </div>
+
+      <div class="intro">
+        <div class="note">
+          This repository is intentionally provisional. It begins as a minimal working archive and expands as the conceptual structure clarifies.
+        </div>
+        <p class="subtitle" style="max-width: 74ch; margin: 0;">
+          The project treats DTb not as a fixed historical object, but as a living framework: a system of territory, learning, mobility, and civic reorganisation.
+        </p>
+        <div class="pillrow" aria-label="Key themes">
+          <span class="pill">territory</span>
+          <span class="pill">education</span>
+          <span class="pill">mobility</span>
+          <span class="pill">commons</span>
+          <span class="pill">archive</span>
+          <span class="pill">anticipatory design</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section class="card prose" aria-labelledby="about-heading">
+        <h2 id="about-heading">About</h2>
+        <p>
+          <span class="smallcaps">Dukeries Thinkbelt</span> explores the relationship between learning, infrastructure, and landscape in West Nottinghamshire. The repository is organised as a working field rather than a finished statement.
+        </p>
+        <p>
+          It gathers drawings, notes, references, territorial observations, and conceptual fragments in a structure that can grow recursively over time.
+        </p>
+        <div class="divider"></div>
+        <h2>Reading the project</h2>
+        <p>
+          The pages in this repository are grouped by function rather than by finality. Some are archival, some analytical, and some speculative. Together they form a map of the project’s physical, institutional, and philosophical layers.
+        </p>
+      </section>
+
+      <nav class="card" aria-labelledby="nav-heading">
+        <h2 id="nav-heading">Start here</h2>
+        <ul class="links">
+          <li><a href="README.md">README <span>project overview</span></a></li>
+          <li><a href="archive/">Archive <span>documents and holdings</span></a></li>
+          <li><a href="drawings/">Drawings <span>plans, diagrams, sketches</span></a></li>
+          <li><a href="territory/">Territory <span>maps and regional readings</span></a></li>
+          <li><a href="notes/">Notes <span>working observations</span></a></li>
+          <li><a href="references/">References <span>sources and citations</span></a></li>
+          <li><a href="wiki/">Wiki <span>conceptual cross-links</span></a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <section class="card" style="margin-top: 20px;" aria-labelledby="layers-heading">
+      <h2 id="layers-heading">Conceptual layers</h2>
+      <div class="three">
+        <div class="mini">
+          <strong>First order</strong>
+          <p>Material and spatial systems: transfer areas, housing, rail, movement, and mapped territory.</p>
+        </div>
+        <div class="mini">
+          <strong>Second order</strong>
+          <p>Organisational systems: decentralised learning, community service, institutional structure, and operational logic.</p>
+        </div>
+        <div class="mini">
+          <strong>Third order</strong>
+          <p>Philosophical systems: commons, social reorganisation, lifelong learning, and the place of the individual in society.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Initial version 0.1 · Designed for local development and GitHub Pages deployment.
+    </footer>
+  </div>
+</body>
+</html>
