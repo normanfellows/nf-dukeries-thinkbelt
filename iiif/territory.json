@@ -1,0 +1,135 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://normanfellows.github.io/dukeries-thinkbelt/iiif/territory.json",
+  "type": "Manifest",
+  "label": {
+    "en": ["Reading the Territory"]
+  },
+  "summary": {
+    "en": [
+      "Four maps used to read the territorial conditions of the Dukeries Thinkbelt."
+    ]
+  },
+  "items": [
+    {
+      "id": "https://normanfellows.github.io/dukeries-thinkbelt/iiif/canvas/1",
+      "type": "Canvas",
+      "label": {
+        "en": ["East Midlands Reference"]
+      },
+      "height": 708,
+      "width": 1000,
+      "items": [
+        {
+          "id": "https://normanfellows.github.io/dukeries-thinkbelt/iiif/page/1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://normanfellows.github.io/dukeries-thinkbelt/iiif/annotation/1",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://normanfellows.github.io/dukeries-thinkbelt/images/territory/item_16097-east-midlands-reference.png",
+                "type": "Image",
+                "format": "image/png",
+                "height": 708,
+                "width": 1000
+              },
+              "target": "https://normanfellows.github.io/dukeries-thinkbelt/iiif/canvas/1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://normanfellows.github.io/dukeries-thinkbelt/iiif/canvas/2",
+      "type": "Canvas",
+      "label": {
+        "en": ["Railway Network 1922"]
+      },
+      "height": 708,
+      "width": 1000,
+      "items": [
+        {
+          "id": "https://normanfellows.github.io/dukeries-thinkbelt/iiif/page/2",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://normanfellows.github.io/dukeries-thinkbelt/iiif/annotation/2",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://normanfellows.github.io/dukeries-thinkbelt/images/territory/item_16233-railway-network-1922.png",
+                "type": "Image",
+                "format": "image/png",
+                "height": 708,
+                "width": 1000
+              },
+              "target": "https://normanfellows.github.io/dukeries-thinkbelt/iiif/canvas/2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://normanfellows.github.io/dukeries-thinkbelt/iiif/canvas/3",
+      "type": "Canvas",
+      "label": {
+        "en": ["DTb Routes and Areas"]
+      },
+      "height": 708,
+      "width": 1000,
+      "items": [
+        {
+          "id": "https://normanfellows.github.io/dukeries-thinkbelt/iiif/page/3",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://normanfellows.github.io/dukeries-thinkbelt/iiif/annotation/3",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://normanfellows.github.io/dukeries-thinkbelt/images/territory/item_16096-dtb-routes-areas.png",
+                "type": "Image",
+                "format": "image/png",
+                "height": 708,
+                "width": 1000
+              },
+              "target": "https://normanfellows.github.io/dukeries-thinkbelt/iiif/canvas/3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://normanfellows.github.io/dukeries-thinkbelt/iiif/canvas/4",
+      "type": "Canvas",
+      "label": {
+        "en": ["Fringe Villages"]
+      },
+      "height": 708,
+      "width": 1000,
+      "items": [
+        {
+          "id": "https://normanfellows.github.io/dukeries-thinkbelt/iiif/page/4",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://normanfellows.github.io/dukeries-thinkbelt/iiif/annotation/4",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://normanfellows.github.io/dukeries-thinkbelt/images/territory/item_16037-fringe-villages.png",
+                "type": "Image",
+                "format": "image/png",
+                "height": 708,
+                "width": 1000
+              },
+              "target": "https://normanfellows.github.io/dukeries-thinkbelt/iiif/canvas/4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
