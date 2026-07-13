@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Reading the Territory — Mirador</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+    }
+
+    #mirador {
+      width: 100%;
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="mirador"></div>
+
+  <script src="https://unpkg.com/mirador@4/dist/mirador.min.js"></script>
+
+  <script>
+    Mirador.viewer({
+      id: 'mirador',
+      windows: [
+        {
+          manifestId: 'https://normanfellows.github.io/dukeries-thinkbelt/iiif/territory.json'
+        }
+      ]
+    });
+  </script>
+
+</body>
+</html>
